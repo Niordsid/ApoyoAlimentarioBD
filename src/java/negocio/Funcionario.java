@@ -13,6 +13,8 @@ public class Funcionario {
     private String id_funcionario;
     private String nombre_funcionario;
     private String apellido_funcionario;
+    private String correofuncionario;
+    
     
     public Funcionario(){
     }
@@ -39,6 +41,14 @@ public class Funcionario {
 
     public void setApellido_funcionario(String apellido_funcionario) {
         this.apellido_funcionario = apellido_funcionario;
+    }
+
+    public String getCorreofuncionario() {
+        return correofuncionario;
+    }
+
+    public void setCorreofuncionario(String correofuncionario) {
+        this.correofuncionario = correofuncionario;
     }
     
     

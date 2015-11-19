@@ -4,7 +4,12 @@
     Author     : AndreStereo
 --%>
 
+<%@page import="negocio.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% Usuario user = new Usuario();
+    user.setPasswd((String) session.getAttribute("CONT"));
+    user.setUser((String) session.getAttribute("USUARIO"));
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +20,7 @@
         <meta name="author" content="">
 
 
-        <title>Programa deApoyo Alimentario</title>
+        <title>Programa de Apoyo Alimentario</title>
 
 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -74,7 +79,37 @@
             </div>
         </div>
 
+        <!--CONTENIDO PAGINA -->
 
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h1 class="page-header">Registrar Solicitud</h1>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-capitalize"> Convocatoria <small>activa</small> </h1><br>
+                    <label for="disabledSelect"> COLOCAR LA VARIABLE QUE ME TRAE EL VALOR ACTUAL DE LA CONVOCATORIA</label>
+
+                </div>
+                <div class="col-md-6">
+                    <h1 class="text-capitalize"> Estudiante <small>datos</small> </h1><br>
+                    <label for="disabledSelect"> COLOCAR LA VARIABLE QUE ME TRAE EL NOMBRE</label>
+                    <label for="disabledSelect"> COLOCAR LA VARIABLE QUE ME TRAE CODIGO</label>
+
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <br>
+                <button type="button" class="btn btn-primary btn-lg">Registrar</button>
+            </div>
+        </div>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>

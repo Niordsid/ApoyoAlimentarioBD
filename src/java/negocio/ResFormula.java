@@ -9,13 +9,17 @@ package negocio;
  *
  * @author AndreStereo
  */
-public class StudSubsidio {
-
+public class ResFormula {
+    
     private int fk_solicitud;
-    private String fk_subsidio;
+    private String fk_campo;
+    private String soporte;
+    private String validacion_soporte;
     private String fk_funcionario;
     
-    public StudSubsidio() {
+    
+    public ResFormula(){
+        
     }
 
     public int getFk_solicitud() {
@@ -26,12 +30,28 @@ public class StudSubsidio {
         this.fk_solicitud = fk_solicitud;
     }
 
-    public String getFk_subsidio() {
-        return fk_subsidio;
+    public String getFk_campo() {
+        return fk_campo;
     }
 
-    public void setFk_subsidio(String fk_subsidio) {
-        this.fk_subsidio = fk_subsidio;
+    public void setFk_campo(String fk_campo) {
+        this.fk_campo = fk_campo;
+    }
+
+    public String getSoporte() {
+        return soporte;
+    }
+
+    public void setSoporte(String soporte) {
+        this.soporte = soporte;
+    }
+
+    public String getValidacion_soporte() {
+        return validacion_soporte;
+    }
+
+    public void setValidacion_soporte(String validacion_soporte) {
+        this.validacion_soporte = validacion_soporte;
     }
 
     public String getFk_funcionario() {
@@ -41,7 +61,6 @@ public class StudSubsidio {
     public void setFk_funcionario(String fk_funcionario) {
         this.fk_funcionario = fk_funcionario;
     }
-     
     
     
 }

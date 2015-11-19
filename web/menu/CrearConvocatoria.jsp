@@ -20,7 +20,7 @@
         <meta name="author" content="">
 
 
-        <title>Programa deApoyo Alimentario</title>
+        <title>Programa de Apoyo Alimentario</title>
 
 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

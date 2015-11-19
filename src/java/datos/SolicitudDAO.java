@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 import negocio.Convocatoria;
-import negocio.Documento;
+
 
 import negocio.Solicitud;
 import negocio.Usuario;
@@ -58,47 +58,9 @@ public class SolicitudDAO {
         return error;
     }
 
-    public void registrardocumentos(Usuario user) throws RHException {
-        Solicitud solicitud = new Solicitud();
-        Documento documento = new Documento();
+ 
 
-        try {
-            String query = "INSERT INTO DOCUMENTO (k_documento, k_solicitud, "
-                    + " n_descripciondoc, n_archivo, v_puntajeprioridad) "
-                    + "VALUES('D'||codigodocumento_seq.nextval,?,?,?,0)";
-            Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
-            PreparedStatement prepStmt = conexion.prepareStatement(query);
-            //prepStmt.setInt(1, solicitud.getId_solicitud()); Se controla el ingreso del id con la secuencia
-            prepStmt.setInt(2, documento.getfk_solicitud());
-            prepStmt.setString(3, documento.getDescripcion_doc());
-            prepStmt.setString(4, documento.getNombre_archivo());
-
-            prepStmt.executeUpdate();
-            prepStmt.close();
-            ServiceLocator.getInstance(user).commit();
-
-        } catch (SQLException e) {
-            throw new RHException("SolicitudDAO", "NO SE PUDO CREAR EL DOCUMENTO" + e.getMessage());
-        } finally {
-            ServiceLocator.getInstance(user).liberarConexion();
-        }
-
-    }
-
-    public void actualizarpuntajedocumento(Usuario user) throws RHException {
-        Solicitud solicitud = new Solicitud();
-        Documento documento = new Documento();
-        try {
-            String strSQL = "UPDATE DOCUMENTO SET v_puntajeprioridad=" + documento.getPuntaje_doc() + " WHERE k_documento=" + documento.getId_documento();
-            Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
-            PreparedStatement prepStmt = conexion.prepareStatement(strSQL);
-            prepStmt.executeUpdate();
-            prepStmt.close();
-            ServiceLocator.getInstance(user).commit();
-        } catch (SQLException e) {
-            throw new RHException("EmpleadoDAO", "No pudo actualizar el estado" + e.getMessage());
-        }
-    }
+    
 
     public void actualizarsolicitud(Usuario user) throws RHException {
         Solicitud solicitud = new Solicitud();

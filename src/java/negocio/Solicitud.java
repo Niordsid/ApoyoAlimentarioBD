@@ -14,20 +14,21 @@ public class Solicitud {
     private int id_solicitud;
     private String fk_estudiante;
     private String fk_convocatoria;
-    private String estado_solicitud;
     private String fecha_solicitud;
+    private String estado_solicitud;
+    private int v_puntajetotal;
 
     public Solicitud() {
 
     }
 
-    public Solicitud(int id_solicitud, String fk_estudiante, String fk_convocatoria, String estado_solicitud, String fecha_solicitud) {
+    public Solicitud(int id_solicitud, String fk_estudiante, String fk_convocatoria, String fecha_solicitud, String estado_solicitud, int v_puntaje) {
         this.id_solicitud = id_solicitud;
         this.fk_estudiante = fk_estudiante;
         this.fk_convocatoria = fk_convocatoria;
-
         this.estado_solicitud = estado_solicitud;
         this.fecha_solicitud = fecha_solicitud;
+        this.v_puntajetotal = v_puntaje;
 
     }
 
@@ -71,4 +72,13 @@ public class Solicitud {
         this.fecha_solicitud = fecha_solicitud;
     }
 
+    public int getV_puntajetotal() {
+        return v_puntajetotal;
+    }
+
+    public void setV_puntajetotal(int v_puntajetotal) {
+        this.v_puntajetotal = v_puntajetotal;
+    }
+
+    
 }

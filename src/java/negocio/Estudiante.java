@@ -14,7 +14,11 @@ public class Estudiante {
     private String  nombre_estudiante;
     private String  apellido_estudiante;
     private int cantidad_matriculas;
-    private String fk_facultad;
+    private String id_proyecto;
+    private String estado_estudiante;
+    private String d_correoelectro;
+    private String id_carnet;
+    
 
     
     public Estudiante(){
@@ -53,12 +57,45 @@ public class Estudiante {
     }
 
     public String getFk_facultad() {
-        return fk_facultad;
+        return id_proyecto;
     }
 
     public void setFk_facultad(String fk_facultad) {
-        this.fk_facultad = fk_facultad;
+        this.id_proyecto = fk_facultad;
     }
+
+    public String getId_proyecto() {
+        return id_proyecto;
+    }
+
+    public void setId_proyecto(String id_proyecto) {
+        this.id_proyecto = id_proyecto;
+    }
+
+    public String getEstado_estudiante() {
+        return estado_estudiante;
+    }
+
+    public void setEstado_estudiante(String estado_estudiante) {
+        this.estado_estudiante = estado_estudiante;
+    }
+
+    public String getD_correoelectro() {
+        return d_correoelectro;
+    }
+
+    public void setD_correoelectro(String d_correoelectro) {
+        this.d_correoelectro = d_correoelectro;
+    }
+
+    public String getId_carnet() {
+        return id_carnet;
+    }
+
+    public void setId_carnet(String id_carnet) {
+        this.id_carnet = id_carnet;
+    }
+    
     
     
 }

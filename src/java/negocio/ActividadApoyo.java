@@ -14,6 +14,8 @@ public class ActividadApoyo {
     private int id_actividad;
     private String tipo_actividad;
     private String descripcion;
+    private String responsable;
+    
     
     public ActividadApoyo() {
     }
@@ -41,6 +43,15 @@ public class ActividadApoyo {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(String responsable) {
+        this.responsable = responsable;
+    }
+    
     
     
 }

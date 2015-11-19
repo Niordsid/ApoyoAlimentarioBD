@@ -10,15 +10,15 @@ package negocio;
  * @author AndreStereo
  */
 public class Subsidio {
-
     private String id_subsidio;
     private String tipo_subsidio;
-    private int descuento;
-    private int fk_actividad;
-    
-    public Subsidio() {
-    }
+    private int porcentaje_descuento;
 
+    
+    public Subsidio(){
+                
+    }
+    
     public String getId_subsidio() {
         return id_subsidio;
     }
@@ -35,21 +35,16 @@ public class Subsidio {
         this.tipo_subsidio = tipo_subsidio;
     }
 
-    public int getDescuento() {
-        return descuento;
+    public int getPorcentaje_descuento() {
+        return porcentaje_descuento;
     }
 
-    public void setDescuento(int descuento) {
-        this.descuento = descuento;
+    public void setPorcentaje_descuento(int porcentaje_descuento) {
+        this.porcentaje_descuento = porcentaje_descuento;
     }
-
-    public int getFk_actividad() {
-        return fk_actividad;
-    }
-
-    public void setFk_actividad(int fk_actividad) {
-        this.fk_actividad = fk_actividad;
-    }
+    
+    
+    
     
     
 }

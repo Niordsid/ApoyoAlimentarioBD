@@ -1,13 +1,10 @@
 .container {
   padding: 0 15px;
-  width: 586px;
+ // width: 600px;
   height: 100%;
   background-color: #fff;
 }
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;

@@ -5,6 +5,7 @@
 --%>
 
 <%@page import="negocio.Usuario"%>
+<%@page import="negocio.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% Usuario user = new Usuario();
     user.setPasswd((String) session.getAttribute("CONT"));
@@ -94,7 +95,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1 class="text-capitalize"> Convocatoria <small>activa</small> </h1><br>
-                    <label for="disabledSelect"> COLOCAR LA VARIABLE QUE ME TRAE EL VALOR ACTUAL DE LA CONVOCATORIA</label>
+                    <label for="disabledSelect"> </label>
 
                 </div>
                 <div class="col-md-6">

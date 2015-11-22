@@ -1,7 +1,7 @@
 <%-- 
     Document   : CrearConvocatoria
     Created on : 16/11/2015, 03:22:23 PM
-    Author     : Carlos Suarez
+    Author     : AndreStereo
 --%>
 
 <%@page import="negocio.Usuario"%>

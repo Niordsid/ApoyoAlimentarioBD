@@ -32,20 +32,18 @@ public class SolicitudDAO {
 
     }
 
-    public String registrarsolicitud(Usuario user) throws RHException {
-        Solicitud solicitud = new Solicitud();
+    public String registrarsolicitud(Usuario user, Solicitud sol) throws RHException {
+        
         String error = "";
         try {
-            String query = "INSERT INTO solicitud (k_solicitud, k_estudiante, "
-                    + " k_convocatoria, n_estadosolicitud, f_solicitud) "
-                    + "VALUES(codigosolicitud_seq.nextval,?,?,'En Proceso',?)";
+            String query = "INSERT INTO UDA_POSTULACION (k_solicitud, k_estudiante, "
+                    + " k_convocatoria, f_solicitud, n_estadosolicitud, v_puntajetotal)"
+                    + "VALUES(SEC_SOLICITUD.nextval,?,?,SYSDATE,'En Proceso',NULL)";
             Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
             PreparedStatement prepStmt = conexion.prepareStatement(query);
             //prepStmt.setInt(1, solicitud.getId_solicitud()); Se controla el ingreso del id con la secuencia
-            prepStmt.setString(2, solicitud.getFk_estudiante());
-            prepStmt.setString(3, solicitud.getFk_convocatoria());
-            //prepStmt.setString(5, solicitud.getEstado_solicitud()); Se inserta por defecto el valor de solicitud En proceso
-            prepStmt.setDate(6, java.sql.Date.valueOf(solicitud.getFecha_solicitud()));
+            prepStmt.setString(1, sol.getFk_estudiante());
+            prepStmt.setString(2, sol.getFk_convocatoria());
             prepStmt.executeUpdate();
             prepStmt.close();
             ServiceLocator.getInstance(user).commit();

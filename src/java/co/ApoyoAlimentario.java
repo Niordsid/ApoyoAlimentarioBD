@@ -10,10 +10,12 @@ package co;
  * @author AndreStereo
  */
 import datos.ConvocatoriaDAO;
+import datos.SolicitudDAO;
 import negocio.Usuario;
 import datos.UsuarioDAO;
 import java.util.StringTokenizer;
 import negocio.Convocatoria;
+import negocio.Solicitud;
 import util.RHException;
 
 public class ApoyoAlimentario {
@@ -24,48 +26,26 @@ public class ApoyoAlimentario {
     public static void main(String[] args) throws RHException {
 
         Usuario user = new Usuario();
+        ConvocatoriaDAO convDao = new ConvocatoriaDAO();
+        Convocatoria conv = new Convocatoria();
+        String id_con =null;
 
-        user.setUser("ANDRES");
-        user.setPasswd("ANDRES");
+        user.setUser("E20101020089");
+        user.setPasswd("E20101020089");
+
+        id_con = convDao.SelectConvocatoria(user);
+        System.out.println(id_con);
 
         //ahora la conexión 
         UsuarioDAO userDao = new UsuarioDAO();
-        Convocatoria conv = new Convocatoria();
-        
-        StringTokenizer st = new StringTokenizer("2015-02-02", "-", true);
-        String ano = "";
-        while (st.hasMoreTokens()) {
-            ano = st.nextToken() + ano;
-        }
-        StringTokenizer st2 = new StringTokenizer("2015-03-02", "-", true);
-        String ano2 = "";
-        while (st2.hasMoreTokens()) {
-            ano2 = st2.nextToken() + ano2;
-        }
-        conv.setId_convocatoria("2015-1");
-        conv.setFecha_inicioconvocatoria(ano);
-        conv.setFecha_finconvocatoria(ano2);
-        conv.setV_cupos_A(Integer.parseInt("200"));
-        conv.setV_cupos_B(Integer.parseInt("200"));
-        conv.setV_cupos_C(Integer.parseInt("200"));
-        
-        System.out.println(conv.getId_convocatoria());
-        System.out.println(conv.getFecha_inicioconvocatoria());
-        System.out.println(conv.getFecha_finconvocatoria());
-        System.out.println(conv.getV_cupos_A());
-        System.out.println(conv.getV_cupos_B());
-        System.out.println(conv.getV_cupos_C());        
-        
-        ConvocatoriaDAO convDao = new ConvocatoriaDAO();
-        String rta[] = convDao.crearConvocatoria(conv, user);                         
-        
-         System.out.println(rta[0]);
-         System.out.println(rta[1]);
-        
-        
-        
-       
-        
+        Solicitud sol = new Solicitud();
+        SolicitudDAO soldao = new SolicitudDAO();
+
+        sol.setFk_estudiante(user.getUser());
+        sol.setFk_convocatoria(id_con);
+
+        System.out.println(soldao.registrarsolicitud(user, sol));
+
     }
 
 }

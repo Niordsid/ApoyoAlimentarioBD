@@ -38,21 +38,22 @@ public class ConvocatoriaDAO {
         String pc_error = null;
 
         try {
-            
+
             Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
             CallableStatement cstmt = conexion.prepareCall("{call S_PR_CREAR_CONVOCATORIA(?,?,?,?,?,?,?,?)}");
-            
+
             cstmt.setString(1, conv.getId_convocatoria());
             cstmt.setString(2, conv.getFecha_inicioconvocatoria());
             cstmt.setString(3, conv.getFecha_finconvocatoria());
             cstmt.setInt(4, conv.getV_cupos_A());
             cstmt.setInt(5, conv.getV_cupos_B());
             cstmt.setInt(6, conv.getV_cupos_C());
+
             cstmt.registerOutParameter(7, java.sql.Types.NUMERIC);
             cstmt.registerOutParameter(8, java.sql.Types.VARCHAR);
-            
+
             cstmt.executeQuery();
-    
+
             pm_error = cstmt.getString(8);
             pc_error = String.valueOf(cstmt.getInt(7));
 
@@ -64,7 +65,7 @@ public class ConvocatoriaDAO {
             System.out.println("NO-OK");
             //throw new RHException("Convocatoria_DAO " + "Error Registrar Convocatoria: " + e.getMessage());
             pm_error = "Convocatoria_DAO " + "Error Registrar Convocatoria: " + e.getMessage();
-            
+
         } finally {
             ServiceLocator.getInstance(user).liberarConexion();
         }
@@ -133,23 +134,31 @@ public class ConvocatoriaDAO {
         }
     }
 
-    public void participarconvocatoria(Usuario user) throws RHException {
+    public String SelectConvocatoria(Usuario user) throws RHException {
+        String idconvocatoria = "";
         try {
 
-            String query = "INSERT INTO ESTUD_CONVO (K_ESTUDIANTE, K_CONVOCATORIA) VALUES (?,?)";
+            String query = "SELECT K_CONVOCATORIA FROM UDA_AVISO WHERE N_ESTADOCONVO='Abierta' order by K_CONVOCATORIA desc";
             Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
             PreparedStatement prepStmt = conexion.prepareStatement(query);
-            prepStmt.setString(1, estudiante.getId_estudiante());
-            prepStmt.setString(1, convocatoria.getId_convocatoria());
+            ResultSet resultado = prepStmt.executeQuery();
+            while (resultado.next()) {
+                idconvocatoria = resultado.getString("K_CONVOCATORIA");
 
+            }
             prepStmt.executeUpdate();
             prepStmt.close();
             ServiceLocator.getInstance(user).commit();
-
+            // Cierra el statement antes de terminar
+            prepStmt.close();
+            // Devuelve los usuarios
+            return idconvocatoria;
         } catch (SQLException e) {
-            throw new RHException("EmpleadoDAO", "No se pudo Registrar la Participacion" + e.getMessage());
+            throw new RHException("EmpleadoDAO", "No pudo actualizar el estado" + e.getMessage());
+        }finally {
+            ServiceLocator.getInstance(user).liberarConexion();
         }
-
+        
     }
 
     public Convocatoria getConvocatoria() {

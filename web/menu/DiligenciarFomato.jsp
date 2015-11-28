@@ -97,30 +97,42 @@
                     <div class="row">
                         <!-- <div class="col-md-6 col-sm-6 col-xs-12"> -->
                         <form method="post">
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="select">
-                                    &iquest;Cual es su estrato Socioeconomico de la vivienda en la cual reside?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="select" name="select">
-                                    <option value="Estrato socioeconomico 1">
-                                        Estrato socioeconomico 1
-                                    </option>
-                                    <option value="Estrato socioeconomico 2">
-                                        Estrato socioeconomico 2
-                                    </option>
-                                    <option value="Estrato socioeconomico 3">
-                                        Estrato socioeconomico 3
-                                    </option>
-                                    <option value="Estrato socioeconomico 4">
-                                        Estrato socioeconomico 4
-                                    </option>
-                                    <option value="Otro Estrato">
-                                        Otro Estrato
-                                    </option>
-                                </select>
+                            <div class="row">
+                                <div class="form-group ">
+
+                                    <div class="col-lg-6">
+                                        <label class="control-label requiredField" for="select">
+                                            &iquest;Cual es su estrato Socioeconomico de la vivienda en la cual reside?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="select" name="select">
+                                            <option value="Estrato socioeconomico 1">
+                                                Estrato socioeconomico 1
+                                            </option>
+                                            <option value="Estrato socioeconomico 2">
+                                                Estrato socioeconomico 2
+                                            </option>
+                                            <option value="Estrato socioeconomico 3">
+                                                Estrato socioeconomico 3
+                                            </option>
+                                            <option value="Estrato socioeconomico 4">
+                                                Estrato socioeconomico 4
+                                            </option>
+                                            <option value="Otro Estrato">
+                                                Otro Estrato
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label class="control-label">Select File</label>
+                                        <input id="input-1" type="file" class="file">
+
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="form-group ">
                                 <label class="control-label requiredField" for="ingresos">

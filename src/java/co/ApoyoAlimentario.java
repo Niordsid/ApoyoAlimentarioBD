@@ -30,8 +30,8 @@ public class ApoyoAlimentario {
         Convocatoria conv = new Convocatoria();
         String id_con =null;
 
-        user.setUser("E20101020011");
-        user.setPasswd("E20101020011");
+        user.setUser("E20101020110");
+        user.setPasswd("E20101020110");
 
         id_con = convDao.SelectConvocatoria(user);
         System.out.println(id_con);

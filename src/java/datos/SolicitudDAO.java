@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package datos;
 
 import java.sql.CallableStatement;
@@ -22,10 +18,6 @@ import negocio.Usuario;
 import util.RHException;
 import util.ServiceLocator;
 
-/**
- *
- * @author AndreStereo
- */
 public class SolicitudDAO {
 
     public SolicitudDAO() {
@@ -41,7 +33,7 @@ public class SolicitudDAO {
                     + "VALUES(SEC_SOLICITUD.nextval,?,?,SYSDATE,'En Proceso',NULL)";
             Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
             PreparedStatement prepStmt = conexion.prepareStatement(query);
-            //prepStmt.setInt(1, solicitud.getId_solicitud()); Se controla el ingreso del id con la secuencia
+            
             prepStmt.setString(1, sol.getFk_estudiante());
             prepStmt.setString(2, sol.getFk_convocatoria());
             prepStmt.executeUpdate();
@@ -49,7 +41,7 @@ public class SolicitudDAO {
             ServiceLocator.getInstance(user).commit();
             error = "Registrado solicitud!!!";
         } catch (SQLException e) {
-            throw new RHException("SolicitudDAO", "NO SE PUDO CREAR LA SOLICITUD" + e.getMessage());
+            throw new RHException("SolicitudDAO", "NO SE PUDO CREAR LA SOLICITUD " + e.getMessage());
         } finally {
             ServiceLocator.getInstance(user).liberarConexion();
         }

@@ -118,19 +118,19 @@
                             </select><br>
 
                             <label for="CedulaInput">Fecha de Ingreso</label>
-                            <input name="fechain"style="width:200px;height:25px" type="date" class="form-control" id="cedulaInput"><br>
+                            <input name="fechain" type="date" class="form-control" id="cedulaInput"><br>
 
                             <label for="CedulaInput">Fecha de Finalizacion</label>
-                            <input name="fechafin"style="width:200px;height:25px" type="date" class="form-control" id="cedulaInput"><br>
+                            <input name="fechafin" type="date" class="form-control" id="cedulaInput"><br>
 
                             <label for="CedulaInput">Cupos para subsidio tipo A</label>
-                            <input name="tipoA" style="width:200px;height:25px" type="number" class="form-control" id="cedulaInput"><br>
+                            <input name="tipoA"  type="number" class="form-control" id="cedulaInput"><br>
 
                             <label for="CedulaInput">Cupos para subsidio tipo B</label>
-                            <input name="tipoB" style="width:200px;height:25px" type="number" class="form-control" id="cedulaInput"><br>
+                            <input name="tipoB"  type="number" class="form-control" id="cedulaInput"><br>
 
                             <label for="CedulaInput">Cupos para subsidio tipo C</label>
-                            <input name="tipoC" style="width:200px;height:25px" type="number" class="form-control" id="cedulaInput"><br>
+                            <input name="tipoC"  type="number" class="form-control" id="cedulaInput"><br>
 
                             <div align="left"><button type="submit" class="btn btn-success"> Registrar Convocatoria</button></div>
 

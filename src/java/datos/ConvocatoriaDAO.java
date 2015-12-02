@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package datos;
 
 import java.sql.CallableStatement;
@@ -19,10 +15,7 @@ import util.RHException;
 
 import util.ServiceLocator;
 
-/**
- *
- * @author AndreStereo
- */
+
 public class ConvocatoriaDAO {
 
     private Convocatoria convocatoria;
@@ -138,7 +131,7 @@ public class ConvocatoriaDAO {
         String idconvocatoria = "";
         try {
 
-            String query = "SELECT K_CONVOCATORIA FROM UDA_AVISO WHERE N_ESTADOCONVO='Abierta' order by K_CONVOCATORIA desc";
+            String query = "SELECT K_CONVOCATORIA FROM UDA_AVISO WHERE N_ESTADOCONVO='Abierta' AND ROWNUM=1 ORDER BY K_CONVOCATORIA DESC";
             Connection conexion = ServiceLocator.getInstance(user).tomarConexion();
             PreparedStatement prepStmt = conexion.prepareStatement(query);
             ResultSet resultado = prepStmt.executeQuery();

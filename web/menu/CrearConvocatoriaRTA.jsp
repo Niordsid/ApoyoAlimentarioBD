@@ -1,7 +1,7 @@
 <%-- 
     Document   : CrearConvocatoriaRTA
     Created on : 16/11/2015, 03:38:56 PM
-    Author     : Carlos Suarez
+    Author     : AndreStereo
 --%>
 
 <%@page import="datos.ConvocatoriaDAO"%>

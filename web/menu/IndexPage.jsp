@@ -1,7 +1,7 @@
 <%-- 
     Document   : indexpage
     Created on : 16/11/2015, 02:35:10 PM
-    Author     : Carlos Suarez
+    Author     : AndreStereo
 --%>
 
 <%@page import="util.RHException"%>

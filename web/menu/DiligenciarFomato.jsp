@@ -97,10 +97,10 @@
                     <div class="row">
                         <!-- <div class="col-md-6 col-sm-6 col-xs-12"> -->
                         <form method="post">
-                            <div class="row">
-                                <div class="form-group ">
 
-                                    <div class="col-lg-6">
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group">
                                         <label class="control-label requiredField" for="select">
                                             &iquest;Cual es su estrato Socioeconomico de la vivienda en la cual reside?
                                             <span class="asteriskField">
@@ -125,174 +125,274 @@
                                             </option>
                                         </select>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-6">
-                                        <label class="control-label">Select File</label>
-                                        <input id="input-1" type="file" class="file">
 
-                                    </div>
+
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-1" type="file" class="file">
 
                                 </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="ingresos">
-                                    &iquest;Cual es el valor Mensual de Ingresos familiares o propios?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="ingresos" name="ingresos">
-                                    <option value="Ingreso de 0 a 1 SMMV">
-                                        Ingreso de 0 a 1 SMMV
-                                    </option>
-                                    <option value="Ingreso de 1 a 2 SMMV">
-                                        Ingreso de 1 a 2 SMMV
-                                    </option>
-                                    <option value="Ingreso de 2 a 3 SMMV">
-                                        Ingreso de 2 a 3 SMMV
-                                    </option>
-                                    <option value="ngreso de 3 o mas SMMV">
-                                        ngreso de 3 o mas SMMV
-                                    </option>
-                                    <option value="Otro ingreso">
-                                        Otro ingreso
-                                    </option>
-                                </select>
+
+
+                            <div class="row">                   
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="control-label requiredField" for="ingresos">
+                                            &iquest;Cual es el valor Mensual de Ingresos familiares o propios?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="ingresos" name="ingresos">
+                                            <option value="Ingreso de 0 a 1 SMMV">
+                                                Ingreso de 0 a 1 SMMV
+                                            </option>
+                                            <option value="Ingreso de 1 a 2 SMMV">
+                                                Ingreso de 1 a 2 SMMV
+                                            </option>
+                                            <option value="Ingreso de 2 a 3 SMMV">
+                                                Ingreso de 2 a 3 SMMV
+                                            </option>
+                                            <option value="ngreso de 3 o mas SMMV">
+                                                ngreso de 3 o mas SMMV
+                                            </option>
+                                            <option value="Otro ingreso">
+                                                Otro ingreso
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-2" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="sostener">
-                                    &iquest;Como estudiante sostiene el lugar donde vive?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="sostener" name="sostener">
-                                    <option value="Sostengo el hogar en el que vivo">
-                                        Sostengo el hogar en el que vivo
-                                    </option>
-                                    <option value="No Sostengo el hogar">
-                                        No Sostengo el hogar
-                                    </option>
-                                </select>
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="sostener">
+                                            &iquest;Como estudiante sostiene el lugar donde vive?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="sostener" name="sostener">
+                                            <option value="Sostengo el hogar en el que vivo">
+                                                Sostengo el hogar en el que vivo
+                                            </option>
+                                            <option value="No Sostengo el hogar">
+                                                No Sostengo el hogar
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-3" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="sostener2">
-                                    &iquest;Como estudiante se sostiene econ&oacute;micamente a si mismo?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="sostener2" name="sostener2">
-                                    <option value="Me sostengo economicamente">
-                                        Me sostengo economicamente
-                                    </option>
-                                    <option value="No me sostengo economicamente">
-                                        No me sostengo economicamente
-                                    </option>
-                                </select>
+
+
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="sostener2">
+                                            &iquest;Como estudiante se sostiene econ&oacute;micamente a si mismo?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="sostener2" name="sostener2">
+                                            <option value="Me sostengo economicamente">
+                                                Me sostengo economicamente
+                                            </option>
+                                            <option value="No me sostengo economicamente">
+                                                No me sostengo economicamente
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-4" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="nucleo">
-                                    &iquest;Vive fuera de su n&uacute;cleo familiar de origen (pap&aacute;, mam&aacute;, hermanos)?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="nucleo" name="nucleo">
-                                    <option value="Vivo con personas que no son nucleo familiar inmediato">
-                                        Vivo con personas que no son nucleo familiar inmediato
-                                    </option>
-                                    <option value="Vivo con mi nucleo familiar inmediato">
-                                        Vivo con mi nucleo familiar inmediato
-                                    </option>
-                                </select>
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="nucleo">
+                                            &iquest;Vive fuera de su n&uacute;cleo familiar de origen (pap&aacute;, mam&aacute;, hermanos)?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="nucleo" name="nucleo">
+                                            <option value="Vivo con personas que no son nucleo familiar inmediato">
+                                                Vivo con personas que no son nucleo familiar inmediato
+                                            </option>
+                                            <option value="Vivo con mi nucleo familiar inmediato">
+                                                Vivo con mi nucleo familiar inmediato
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-5" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="responsabilidad">
-                                    &iquest;Como estudiante tiene personas a cargo?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="responsabilidad" name="responsabilidad">
-                                    <option value="Si, Tengo conyuge o hijos u otras personas a cargo">
-                                        Si, Tengo conyuge o hijos u otras personas a cargo
-                                    </option>
-                                    <option value="No, No Tengo conyuge e hijos u otras personas a cargo">
-                                        No, No Tengo conyuge e hijos u otras personas a cargo
-                                    </option>
-                                </select>
+
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="responsabilidad">
+                                            &iquest;Como estudiante tiene personas a cargo?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="responsabilidad" name="responsabilidad">
+                                            <option value="Si, Tengo conyuge o hijos u otras personas a cargo">
+                                                Si, Tengo conyuge o hijos u otras personas a cargo
+                                            </option>
+                                            <option value="No, No Tengo conyuge e hijos u otras personas a cargo">
+                                                No, No Tengo conyuge e hijos u otras personas a cargo
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-6" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="proviene">
-                                    &iquest;Proviene de Municipios o ciudades distintos a Bogot&aacute;?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="proviene" name="proviene">
-                                    <option value="Si, provengo de municipios distintos a Bogota">
-                                        Si, provengo de municipios distintos a Bogota
-                                    </option>
-                                    <option value="No provengo de algun municipio">
-                                        No provengo de algun municipio
-                                    </option>
-                                </select>
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="proviene">
+                                            &iquest;Proviene de Municipios o ciudades distintos a Bogot&aacute;?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="proviene" name="proviene">
+                                            <option value="Si, provengo de municipios distintos a Bogota">
+                                                Si, provengo de municipios distintos a Bogota
+                                            </option>
+                                            <option value="No provengo de algun municipio">
+                                                No provengo de algun municipio
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>   
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-7" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="select7">
-                                    &iquest;De estas condiciones cuales presenta su nucleo familiar?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="select7" name="select7">
-                                    <option value="Condicion de desplazamiento forzado">
-                                        Condicion de desplazamiento forzado
-                                    </option>
-                                    <option value="Mujer Cabeza de Hogar">
-                                        Mujer Cabeza de Hogar
-                                    </option>
-                                    <option value="Desmovilizado">
-                                        Desmovilizado
-                                    </option>
-                                    <option value="Ninguna">
-                                        Ninguna
-                                    </option>
-                                </select>
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="select7">
+                                            &iquest;De estas condiciones cuales presenta su nucleo familiar?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="select7" name="select7">
+                                            <option value="Condicion de desplazamiento forzado">
+                                                Condicion de desplazamiento forzado
+                                            </option>
+                                            <option value="Mujer Cabeza de Hogar">
+                                                Mujer Cabeza de Hogar
+                                            </option>
+                                            <option value="Desmovilizado">
+                                                Desmovilizado
+                                            </option>
+                                            <option value="Ninguna">
+                                                Ninguna
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-8" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="discapacidad">
-                                    &iquest;Presenta alg&uacute;n tipo de discapacidad f&iacute;sica o mental?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="discapacidad" name="discapacidad">
-                                    <option value="Si Presento discapacidad fisica o mental">
-                                        Si Presento discapacidad fisica o mental
-                                    </option>
-                                    <option value="No presento ningun tipo de discapacidad">
-                                        No presento ningun tipo de discapacidad
-                                    </option>
-                                </select>
+
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="discapacidad">
+                                            &iquest;Presenta alg&uacute;n tipo de discapacidad f&iacute;sica o mental?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="discapacidad" name="discapacidad">
+                                            <option value="Si Presento discapacidad fisica o mental">
+                                                Si Presento discapacidad fisica o mental
+                                            </option>
+                                            <option value="No presento ningun tipo de discapacidad">
+                                                No presento ningun tipo de discapacidad
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-9" type="file" class="file">
+
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="control-label requiredField" for="nutricion">
-                                    &iquest;Presenta alguna patolog&iacute;a asociado con la nutrici&oacute;n y la alimentaci&oacute;n?
-                                    <span class="asteriskField">
-                                        *
-                                    </span>
-                                </label>
-                                <select class="select form-control" id="nutricion" name="nutricion">
-                                    <option value="Sufro de problemas alimentacios">
-                                        Sufro de problemas alimentacios
-                                    </option>
-                                    <option value="No tengo problemas alimenticios">
-                                        No tengo problemas alimenticios
-                                    </option>
-                                </select>
+
+
+                            <div class="row">  
+                                <div class="col-lg-6">
+                                    <div class="form-group ">
+                                        <label class="control-label requiredField" for="nutricion">
+                                            &iquest;Presenta alguna patolog&iacute;a asociado con la nutrici&oacute;n y la alimentaci&oacute;n?
+                                            <span class="asteriskField">
+                                                *
+                                            </span>
+                                        </label>
+                                        <select class="select form-control" id="nutricion" name="nutricion">
+                                            <option value="Sufro de problemas alimentacios">
+                                                Sufro de problemas alimentacios
+                                            </option>
+                                            <option value="No tengo problemas alimenticios">
+                                                No tengo problemas alimenticios
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <br>
+                                    <input id="input-10" type="file" class="file">
+
+                                </div>
                             </div>
+
                             <div class="form-group">
                                 <div>
                                     <button class="btn btn-primary " name="submit" type="submit">
